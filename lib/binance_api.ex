@@ -178,6 +178,9 @@ defmodule BinanceApi do
   defdelegate futures_trade_list(symbol, params \\ %{}, opts \\ []),
     to: BinanceApi.Order
 
+  # Futures Account API
+
+  defdelegate futures_account(opts \\ []), to: BinanceApi.Account
 
   # Account Api
 

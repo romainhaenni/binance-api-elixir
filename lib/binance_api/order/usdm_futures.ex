@@ -4,6 +4,7 @@ defmodule BinanceApi.Order.USDMFutures do
   @batch_create_order_limit 5
   @batch_delete_order_limit 5
 
+
   @spec all_orders(HTTP.opts) :: HTTP.res_multi
   def all_orders(opts) do
     HTTP.futures_get("/allOrders", Keyword.put(opts, :secured?, true))
@@ -79,4 +80,3 @@ defmodule BinanceApi.Order.USDMFutures do
     )
   end
 end
-
