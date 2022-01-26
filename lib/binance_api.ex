@@ -172,15 +172,14 @@ defmodule BinanceApi do
   @spec futures_account_balance(HTTP.opts) :: HTTP.res
   defdelegate futures_account_balance(opts \\ []), to: BinanceApi.Order
 
+  defdelegate futures_account_information(opts \\ []), to: BinanceApi.Order
+
   @spec futures_trade_list(symbol :: String.t) :: HTTP.res
   @spec futures_trade_list(symbol :: String.t, params :: map) :: HTTP.res
   @spec futures_trade_list(symbol :: String.t, params :: map, HTTP.opts) :: HTTP.res
   defdelegate futures_trade_list(symbol, params \\ %{}, opts \\ []),
     to: BinanceApi.Order
 
-  # Futures Account API
-
-  defdelegate futures_account(opts \\ []), to: BinanceApi.Account
 
   # Account Api
 
@@ -188,4 +187,6 @@ defmodule BinanceApi do
   @spec account(HTTP.opts) :: HTTP.res_single
   @doc "Get account details"
   defdelegate account(opts \\ []), to: BinanceApi.Account
+
+
 end

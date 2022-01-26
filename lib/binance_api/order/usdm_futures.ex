@@ -66,11 +66,6 @@ defmodule BinanceApi.Order.USDMFutures do
     )
   end
 
-  @spec account_balance(HTTP.opts) :: HTTP.res
-  def account_balance(opts) do
-    HTTP.futures_get("/balance", Keyword.put(opts, :secured?, true))
-  end
-
   @spec trade_list(symbol :: String.t, params :: map, HTTP.opts) :: HTTP.res
   def trade_list(symbol, params, opts) do
     HTTP.futures_get(
@@ -78,5 +73,15 @@ defmodule BinanceApi.Order.USDMFutures do
       Map.put(params, :symbol, symbol),
       Keyword.put(opts, :secured?, true)
     )
+  end
+
+  @spec account_balance(HTTP.opts) :: HTTP.res
+  def account_balance(opts) do
+    HTTP.futures_get("/balance", Keyword.put(opts, :secured?, true))
+  end
+
+  @spec account_information(HTTP.opts) :: HTTP.res
+  def account_information(opts) do
+    HTTP.futures_get("/account", Keyword.put(opts, :secured?, true))
   end
 end

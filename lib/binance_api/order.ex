@@ -81,4 +81,8 @@ defmodule BinanceApi.Order do
   defdelegate futures_account_balance(opts),
     to: Order.USDMFutures,
     as: :account_balance
+
+    defdelegate futures_account_information(opts),
+      to: Order.USDMFutures,
+      as: :account_information
 end
