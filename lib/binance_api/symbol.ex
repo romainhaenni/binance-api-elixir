@@ -10,6 +10,6 @@ defmodule BinanceApi.Symbol do
 
   @spec futures_ticker_price(symbol :: String.t, HTTP.opts) :: HTTP.res_single
   def futures_ticker_price(symbol, opts) do
-    HTTP.futures_get("/fapi/v1/ticker/price", %{symbol: symbol}, opts)
+    HTTP.futures_get("/ticker/price", %{symbol: symbol}, opts)
   end
 end
