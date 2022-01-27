@@ -47,8 +47,8 @@ defmodule BinanceApi.HTTP do
   @spec opts_definitions() :: Keyword.t
   def opts_definitions, do: @opts_definition
 
-  @spec build_futures_url(String.t) :: String.t
-  def build_futures_url(path), do: Path.join("/fapi/v2", path)
+  # @spec build_futures_url(String.t) :: String.t
+  # def build_futures_url(path), do: Path.join("/fapi/v2", path)
 
   @spec build_v1_url(String.t) :: String.t
   def build_v1_url(path), do: Path.join("/sapi/v1", path)
