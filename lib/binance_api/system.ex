@@ -8,7 +8,7 @@ defmodule BinanceApi.System do
 
   @spec futures_ping(HTTP.opts) :: :pong | HTTP.error
   def futures_ping(opts) do
-    with {:ok, %{}} <- HTTP.futures_get("/ping", opts), do: :pong
+    with {:ok, %{}} <- HTTP.futures_get("/fapi/v1/ping", opts), do: :pong
   end
 
   @spec server_time(HTTP.opts) :: HTTP.res_single

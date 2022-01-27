@@ -59,18 +59,18 @@ defmodule BinanceApi.HTTP do
   @spec futures_get(String.t, Keyword.t) :: res
   @spec futures_get(String.t, nil | map, Keyword.t) :: res
   def futures_get(url, params \\ nil, opts) do
-    url |> build_futures_url |> get(params, make_futures_request(opts))
+    url |> get(params, make_futures_request(opts))
   end
 
   @spec futures_delete(String.t, Keyword.t) :: res
   @spec futures_delete(String.t, nil | map, Keyword.t) :: res
   def futures_delete(url, params \\ nil, opts) do
-    url |> build_futures_url |> delete(params, make_futures_request(opts))
+    url |> delete(params, make_futures_request(opts))
   end
 
   @spec futures_post(String.t, nil | map, Keyword.t) :: res
   def futures_post(url, body, opts) do
-    url |> build_futures_url |> post(body, make_futures_request(opts))
+    url |> post(body, make_futures_request(opts))
   end
 
   defp make_futures_request(opts) do
