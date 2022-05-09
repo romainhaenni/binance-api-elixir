@@ -4,7 +4,7 @@ defmodule BinanceApi.MixProject do
   def project do
     [
       app: :binance_api,
-      version: "0.2.18",
+      version: "0.2.19",
       description: "Binance API access for elixir, doesn't use structs, includes spot and futures",
 
       elixir: "~> 1.12",
@@ -27,10 +27,10 @@ defmodule BinanceApi.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:finch, "~> 0.8"},
+      {:finch, "~> 0.12"},
       {:jason, "~> 1.2"},
       {:proper_case, "~> 1.3"},
-      {:nimble_options, "~> 0.3.0"},
+      {:nimble_options, "~> 0.4.0"},
 
       {:ex_doc, "~> 0.24", only: :dev, runtime: false},
     ]
