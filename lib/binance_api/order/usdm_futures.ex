@@ -84,4 +84,8 @@ defmodule BinanceApi.Order.USDMFutures do
   def account_information(opts) do
     HTTP.futures_get("/fapi/v2/account", Keyword.put(opts, :secured?, true))
   end
+
+  def start_stream(opts) do
+    HTTP.futures_post("/fapi/v1/listenKey", nil, opts)
+  end
 end
