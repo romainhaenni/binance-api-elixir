@@ -85,4 +85,8 @@ defmodule BinanceApi.Order do
     defdelegate futures_account_information(opts),
       to: Order.USDMFutures,
       as: :account_information
+
+    defdelegate futures_start_stream(opts),
+      to: Order.USDMFutures,
+      as: :start_stream
 end

@@ -180,6 +180,9 @@ defmodule BinanceApi do
   defdelegate futures_trade_list(symbol, params \\ %{}, opts \\ []),
     to: BinanceApi.Order
 
+  defdelegate futures_start_stream(opts \\ []),
+    to: BinanceApi.Order
+
 
   # Account Api
 
